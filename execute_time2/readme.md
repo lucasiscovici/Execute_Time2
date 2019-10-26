@@ -49,7 +49,7 @@ snippet:
 
 ```python
 from notebook.services.config import ConfigManager
-ConfigManager().update('notebook', {'ExecuteTime': {
+ConfigManager().update('notebook', {'ExecuteTime2': {
    	'display_absolute_timestamps': False,
     'relative_timing_update_period': 5,
     'template': {
@@ -60,56 +60,56 @@ ConfigManager().update('notebook', {'ExecuteTime': {
 
 The available options are:
 
-* `ExecuteTime.clear_timings_on_clear_output`: When cells' outputs are cleared,
+* `ExecuteTime2.clear_timings_on_clear_output`: When cells' outputs are cleared,
   also clear their timing data, e.g. when using the
   `Kernel > Restart & Clear Output` menu item
 
-* `ExecuteTime.clear_timings_on_kernel_restart`: Clear all cells' execution
+* `ExecuteTime2.clear_timings_on_kernel_restart`: Clear all cells' execution
   timing data on any kernel restart event
 
-* `ExecuteTime.display_absolute_timings`: Display absolute timings for the
+* `ExecuteTime2.display_absolute_timings`: Display absolute timings for the
   start/end time of execution. Setting this `false` will result in the display
   of a relative timestamp like 'a few seconds ago' (see the moment.js function
   [fromNow](https://momentjs.com/docs/#/displaying/fromnow/)
   for details). Defaults to `true`.
 
-* `ExecuteTime.display_absolute_format`: The format to use when displaying
-  absolute timings (see `ExecuteTime.display_absolute_timings`, above).
+* `ExecuteTime2.display_absolute_format`: The format to use when displaying
+  absolute timings (see `ExecuteTime2.display_absolute_timings`, above).
   See the moment.js function
   [format](https://momentjs.com/docs/#/displaying/format/)
   for details of the template tokens available.
   Defaults to `'YYYY-MM-DD HH:mm:ss'`.
 
-* `ExecuteTime.relative_timing_update_period`: Seconds to wait between updating
+* `ExecuteTime2.relative_timing_update_period`: Seconds to wait between updating
   the relative timestamps, if using them (see
-  `ExecuteTime.display_absolute_timings`, above).
+  `ExecuteTime2.display_absolute_timings`, above).
   Defaults to `10`.
 
-* `ExecuteTime.display_in_utc`: Display times in UTC, rather than in the local
+* `ExecuteTime2.display_in_utc`: Display times in UTC, rather than in the local
   timezone set by the browser.
   Defaults to `false`.
 
-* `ExecuteTime.default_kernel_to_utc`: For kernel timestamps which do not
+* `ExecuteTime2.default_kernel_to_utc`: For kernel timestamps which do not
   specify a timezone, assume UTC.
   Defaults to `true`.
 
-* `ExecuteTime.display_right_aligned`: Right-align the text in the timing area
+* `ExecuteTime2.display_right_aligned`: Right-align the text in the timing area
   under each cell.
   Defaults to `false`.
 
-* `ExecuteTime.highlight.use`: Highlight the displayed execution time on
+* `ExecuteTime2.highlight.use`: Highlight the displayed execution time on
   completion of execution.
   Defaults to `true`.
 
-* `ExecuteTime.highlight.color`: Color to use for highlighting the displayed
+* `ExecuteTime2.highlight.color`: Color to use for highlighting the displayed
   execution time.
   Defaults to `'#00BB00'`.
 
-* `ExecuteTime.template.executed`: Template for the timing message for executed
+* `ExecuteTime2.template.executed`: Template for the timing message for executed
   cells. See readme for     replacement tokens.
   Defaults to `'executed in ${duration}, finished ${end_time}'`.
 
-* `ExecuteTime.template.queued`: Template for the timing message for queued
+* `ExecuteTime2.template.queued`: Template for the timing message for queued
   cells. The template uses an ES2015-like syntax, but replaces only the exact
   strings `${start_time}`, plus (if defined) `${end_time}` and `${duration}`.
   Defaults to `'execution queued ${start_time}'`.
@@ -171,7 +171,7 @@ strings, for example:
 
 ```json
 {
-	"ExecuteTime": {
+	"ExecuteTime2": {
     	"start_time": "2016-02-11T18:51:18.536796",
     	"end_time": "2016-02-11T18:51:35.806119"
 	}
